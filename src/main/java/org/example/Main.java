@@ -9,6 +9,6 @@ public class Main {
         System.out.println(MyMath.tg(60));
         System.out.println(MyMath.areaCircle(40));
         System.out.println(MyMath.lengthCircle(55));
-        System.out.println(MyMath.random(3));
+        System.out.println(MyMath.random());
     }
 }

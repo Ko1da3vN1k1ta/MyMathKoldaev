@@ -16,6 +16,7 @@ public class MyMath {
         double radians = toRadians(degrees);
         double sin = 0;
         double progress = radians;
+
         for (int i = 1; i <= 10; i++) {
             sin += progress;
             progress *= -(radians * radians) / ((2 + i) * (2 * i + 1));
@@ -55,11 +56,13 @@ public class MyMath {
         return 2 * PI * radius;
     }
 
-    public static double random(double number) {
-        Random random = new Random();
-        number = random.nextDouble(10);
-        return number;
+    public static int random(int max, int min) {
 
+        return (int) (min + System.currentTimeMillis() % (max - min + 1));
+    }
+
+    public static int random(){
+        return (int) ((System.currentTimeMillis()/9)%10);
     }
 
     public static int maxNumbers(int a, int b) {
